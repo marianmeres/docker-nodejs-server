@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+    server:
+#        restart: unless-stopped
+        restart: always
+        image: mifonkon/node-server
+        build:
+            context: .
+        volumes:
+            - .:/home/node/app
+            - /home/node/app/node_modules
+        working_dir: /home/node/app
+        user: node
+        environment:
+            NODE_ENV: production
+            PORT: 8080
+#            HOST: "0.0.0.0"
+        ports:
+            - "8080:8080"
+        tty: True
+        command: npm run start

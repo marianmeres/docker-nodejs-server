@@ -1,0 +1,25 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "commonjs", // lebo nejdeme cez webpack
+        "moduleResolution": "node",
+        "outDir": "dist/",
+        "rootDir": "src/",
+        "target": "esnext",
+        "lib": ["es2017", "dom"],
+        "jsx": "react",
+        "sourceMap": false,
+        "declaration": false,
+        "forceConsistentCasingInFileNames": false,
+        "noImplicitReturns": false,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "suppressImplicitAnyIndexErrors": false,
+        "noUnusedLocals": false,
+        "experimentalDecorators": true,
+    }
+}
