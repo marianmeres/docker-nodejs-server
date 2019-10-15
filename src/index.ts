@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end(`Hello World (${new Date().toISOString()})\n${JSON.stringify(env, null, 2)}\n`);
+    res.end(`Hello World (${new Date().toISOString()})\n\n\n${JSON.stringify(env, null, 2)}\n`);
 });
 
 server.listen(port, host, () => {
